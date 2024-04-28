@@ -10,13 +10,13 @@ else
     echo "YOU ARE IN THA ROOT USER."
 fi
 #----------------------------------------------------------------------------------------------------------
-yum install mysql -y #packege install చేయడం.
+yum install java -y #packege install చేయడం.
 #----------------------------------------------------------------------------------------------------------
 if [ $? -ne 0 ] # $? అనేది cummand success అవతే  0 వస్తుంది. లేదా number వస్తుంది.
 then
-    echo "ERROR :: Instaling MySql is filed."
+    echo "ERROR :: Instaling java is filed."
     exit 1
 else
-    echo "MySql Instaling id success."
+    echo "java Instaling id success."
 fi
 #-----------------------------------------------------------------------------------------------------------
