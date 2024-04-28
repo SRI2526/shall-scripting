@@ -1,6 +1,6 @@
 #!/bin/bash
-pursone1=$A
-pursone2=$B
+pursone1=$1
+pursone2=$2
 
 echo "$pursone1 ; Hello $pursone2, Good Morning?"
 echo "$pursone2 ; Hello $pursone1, Very Good Morning."
