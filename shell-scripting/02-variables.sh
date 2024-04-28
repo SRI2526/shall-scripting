@@ -1,3 +1,4 @@
+#!bin/bash
 pursone1="prasanna kumar reddy" #verabls is using capital OR small.
 pursone2="sri rama krishna reddy"
 
