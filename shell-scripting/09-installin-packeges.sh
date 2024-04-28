@@ -6,6 +6,7 @@ N="\e[0m"
 if [ $ID -ne 0 ]
 then
     echo -e "$RED ERROR $N:: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS."
+    exit 1
 
 else
     echo "YOU ARE IN THA ROOT USER."
