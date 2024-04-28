@@ -5,7 +5,7 @@ RED="\e[31m"
 N="\e[0m"
 if [ $ID -ne 0 ]
 then
-    echo "$RED ERROR $N:: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS."
+    echo -e "$RED ERROR $N:: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS."
 
 else
     echo "YOU ARE IN THA ROOT USER."
