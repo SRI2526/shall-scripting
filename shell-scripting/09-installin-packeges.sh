@@ -3,6 +3,7 @@ ID=$(id -u) # ROOT లో వుంటే 0 వస్తుంది.ROOR లో
 
 RED="\e[31m"
 N="\e[0m"
+g="\e[32m"
 if [ $ID -ne 0 ]
 then
     echo -e "$RED ERROR $N:: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS."
@@ -13,3 +14,4 @@ else
 fi
 #----------------------------------------------------------------------------------------------------------
 yum install mysql -y #packege install చేయడం.
+echo -e "installstion $g SUCCESS $N"
