@@ -7,3 +7,5 @@ then
 else
     echo "YOU ARE IN THA ROOT USER."
 fi
+#----------------------------------------------------------------------------------------------------------
+yum install mysql -y #packege install చేయడం.
