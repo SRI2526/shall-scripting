@@ -1,29 +1,24 @@
 #!/bin/bash
-ID=$(id -u) # ROOT లో వుంటే 0 వస్తుంది.ROOR లో లేకపోతే NUMNER వస్తుంది./ROOT(SUDO SU)USER అవునా కాదా అని ID లో STORE అవుతుంది. 
-#------------------------------------------------------------------------------------------------------
-TIMESTAMP=$(date +%d-%m-%Y/TIME-%H:%M:%S)
-SAVELOGS="/tmp/$0-$TIMESTAMP.log"
-#------------------------------------------------------------------------------------------------------
-functions(){ # function repeed the code 
-    if [ $1 -ne 0 ] # $? అనేది cummand success అవతే  0 వస్తుంది. లేదా number వస్తుంది.
+ID=$(id -u) 
+
+VALIDATE(){
+    if [ $1 -ne 0 ]
     then
-        echo "ERROR :: $2... is filed."
+        echo "ERROR:: $2.....FAILED"
         exit 1
     else
-        echo "$2... is success."
+        echo "$2.....SUCCESS."
     fi
 }
-#------------------------------------------------------------------------------------------------------
+
 if [ $ID -ne 0 ]
 then
     echo -e "ERROR :: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS."
-    exit 1 #ఇది error వస్తే ఇకడితో stop అవుతుంది.
-
+    exit 1
 else
     echo "YOU ARE IN THA ROOT USER."
 fi
-#----------------------------------------------------------------------------------------------------------
-yum install java -y &>> $SAVELOGS #packege install చేయడం.
-#----------------------------------------------------------------------------------------------------------
-functions $? "instaling java" #function ని call చేయడం. ఇందులో $? arg1,instaling java arg2.
-#----------------------------------------------------------------------------------------------------------
+yum install mysql -y 
+VALIDATE $? "Installing MYSQL"
+yum install nginx -y
+VALIDATE $? "Installing nginx"
