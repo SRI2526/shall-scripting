@@ -1,6 +1,6 @@
 #!/bin/bash
 ID=$(id -u) 
-d=$(date date +%d-%m-%y)
+d=$(date +%d-%m-%y)
 t=$(date +%H:%M:%S)
 
 VALIDATE(){
