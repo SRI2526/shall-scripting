@@ -24,5 +24,6 @@ fi
 yum install java -y &>> $logfiles
 VALIDATE $? "Installing java"
 yum install nginx -y &>> $logfiles
-VALIDATE $? "Installing nginx"
+VALIDATE $? "Installing nginx"\
+echo "$d"
 
