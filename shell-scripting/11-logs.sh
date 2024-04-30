@@ -1,6 +1,7 @@
 #!/bin/bash
 ID=$(id -u) 
-d=$(date +%d-%m-%Y:TIME:%H:%M:%S:)
+d=$(date +%d-%m-%Y::%H:%M:%S)
+logfiles="/var/log/$0--$d.log"
 
 
 VALIDATE(){
@@ -20,8 +21,8 @@ then
 else
     echo "YOU ARE IN THA ROOT USER."
 fi
-yum install java -y 
+yum install java -y &>> $logfiles
 VALIDATE $? "Installing java"
-yum install nginx -y
+yum install nginx -y &>> $logfiles
 VALIDATE $? "Installing nginx"
 echo "DATE AND TIME = $d"
