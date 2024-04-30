@@ -1,7 +1,7 @@
 #!/bin/bash
 ID=$(id -u) 
-d=$(date +%d-%m-%y)
-t=$(date +%H:%M:%S)
+d=$(date +%d-%m-%y :: %H:%M:%S)
+
 
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -24,4 +24,4 @@ yum install java -y
 VALIDATE $? "Installing java"
 yum install nginx -y
 VALIDATE $? "Installing nginx"
-echo "DATE AND TIME = $d :: $t"
+echo "DATE AND TIME = $d"
