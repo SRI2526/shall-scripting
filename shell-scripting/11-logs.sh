@@ -1,7 +1,7 @@
 #!/bin/bash
 ID=$(id -u) 
 d=$(date +%d-%m-%Y::%H:%M:%S)
-logfiles="/var/log/$0--$d.log"
+logfiles="/var/log/messages/$0--$d.log"
 
 
 VALIDATE(){
