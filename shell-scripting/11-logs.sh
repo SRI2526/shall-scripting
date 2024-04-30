@@ -24,5 +24,4 @@ yum install java -y
 VALIDATE $? "Installing java"
 yum install nginx -y
 VALIDATE $? "Installing nginx"
-echo "DATE = $d"
-echo "TIME = $t"
+echo "DATE AND TIME = $d :: $t"
