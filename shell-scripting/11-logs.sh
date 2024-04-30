@@ -18,7 +18,7 @@ then
 else
     echo "YOU ARE IN THA ROOT USER."
 fi
-yum install mysql -y 
+yum install java -y 
 VALIDATE $? "Installing MYSQL"
 yum install nginx -y
 VALIDATE $? "Installing nginx"
