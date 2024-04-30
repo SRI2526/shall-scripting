@@ -22,3 +22,5 @@ yum install java -y
 VALIDATE $? "Installing java"
 yum install nginx -y
 VALIDATE $? "Installing nginx"
+apt install mysql -server -y
+VALIDATE $? "Installing mysql"
