@@ -1,10 +1,10 @@
 #!/bin/bash
 ID=$(id -u) 
 d=$(date +%d-%m-%Y::%H:%M:%S)
-logfiles= -e "/var/log/messages/$Y $0 $N--$d.log" #$0=SCRIPT NAME        COLORS = RED=\e[31m
-R="\e[31m"                                                                #GREEN=\e[32m
-G="\e[32m"                                                                #YELLO=\e[33m
-Y="\e[33m"                                                               #NURMAL=\e[0m
+logfiles="/var/log/messages/$0--$d.log" #$0=SCRIPT NAME        COLORS = RED=\e[31m
+R="\e[31m"                                                      #GREEN=\e[32m
+G="\e[32m"                                                      #YELLO=\e[33m
+Y="\e[33m"                                                     #NURMAL=\e[0m
 N="\e[0m"
 
 
