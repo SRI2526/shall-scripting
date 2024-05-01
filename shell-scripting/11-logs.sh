@@ -20,12 +20,12 @@ VALIDATE(){
 
 if [ $ID -ne 0 ]
 then
-    echo -e "ERROR :: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS."
+    echo -e "$R ERROR :: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS $N."
     exit 1
 else
-    echo "YOU ARE IN THA ROOT USER."
+    echo -e "$G YOU ARE IN THA ROOT USER $N."
 fi
-yum install java -y &>> $logfiles #  (&>> log right or rong)(1>> only success)(2>> only failure)(>>append the log)
+yum install java -y &>> $logfiles    #(&>> log right or rong)(1>> only success)(2>> only failure)(>>append the log)
 VALIDATE $? "Installing java"
 yum install nginx -y &>> $logfiles
 VALIDATE $? "Installing nginx"
