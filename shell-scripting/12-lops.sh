@@ -1,5 +1,5 @@
 #!bin/bash
-for 2 in {1..1000}
+for a in {1..1000}
 do
-    echo "$2"
+    echo "$a"
 done
