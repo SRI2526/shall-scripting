@@ -1,16 +1,20 @@
 #!/bin/bash
 ID=$(id -u) 
 d=$(date +%d-%m-%Y::%H:%M:%S)
-logfiles="/var/log/messages/$0--$d.log"
+logfiles="/var/log/messages/$Y $0 $N--$d.log" #$0=SCRIPT NAME        COLORS = RED=\e[31m
+R="\e[31m"                                                           #GREEN=\e[32m
+G="\e[32m"                                                           #YELLO=\e[33m
+Y="\e[33m"                                                          #NURMAL=\e[0m
+N="\e[0m"
 
 
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo "ERROR:: $2.....FAILED"
+        echo "$R ERROR $N:: $2.....FAILED"
         exit 1
     else
-        echo "$2.....SUCCESS."
+        echo "$2.....$G SUCCESS $N."
     fi
 }
 
@@ -21,7 +25,7 @@ then
 else
     echo "YOU ARE IN THA ROOT USER."
 fi
-yum install java -y &>> $logfiles
+yum install java -y &>> $logfiles #  (&>> log right or rong)(1>> only success)(2>> only failure)(>>append the log)
 VALIDATE $? "Installing java"
 yum install nginx -y &>> $logfiles
 VALIDATE $? "Installing nginx"
