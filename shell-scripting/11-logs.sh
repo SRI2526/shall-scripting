@@ -1,10 +1,10 @@
 #!/bin/bash
 ID=$(id -u) 
 d=$(date +%d-%m-%Y::%H:%M:%S)
-logfiles="/var/log/messages/$0--$d.log" #$0=SCRIPT NAME        COLORS = RED=\e[31m
-R="\e[31m"                                                      #GREEN=\e[32m
-G="\e[32m"                                                      #YELLO=\e[33m
-Y="\e[33m"                                                     #NURMAL=\e[0m
+logfiles="/var/log/messages/$0--$d.log" #$0=SCRIPT NAME    COLORS =\e[31m
+R="\e[31m"                                                 #GREEN =\e[32m
+G="\e[32m"                                                 #YELLO =\e[33m
+Y="\e[33m"                                                #NURMAL =\e[0m
 N="\e[0m"
 
 
@@ -25,7 +25,7 @@ then
 else
     echo -e "$G YOU ARE IN THA ROOT USER $N."
 fi
-yum install javaaa -y &>> $logfiles    #(&>> log right or rong)(1>> only success)(2>> only failure)(>>append the log)
+yum install java -y &>> $logfiles    #(&>> log right or rong)(1>> only success)(2>> only failure)(>>append the log)
 VALIDATE $? "Installing java"
 yum install nginx -y &>> $logfiles
 VALIDATE $? "Installing nginx"
