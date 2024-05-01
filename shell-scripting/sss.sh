@@ -1,3 +1,4 @@
 #!/bin/bash
 a=$0
-echo "$a"
+r="\e[31m"
+echo -e "$r $a"
