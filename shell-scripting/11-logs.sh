@@ -25,7 +25,7 @@ then
 else
     echo -e "$G YOU ARE IN THA ROOT USER $N."
 fi
-yum install java -y &>> $logfiles    #(&>> log right or rong)(1>> only success)(2>> only failure)(>>append the log)
+yum install javaaa -y &>> $logfiles    #(&>> log right or rong)(1>> only success)(2>> only failure)(>>append the log)
 VALIDATE $? "Installing java"
 yum install nginx -y &>> $logfiles
 VALIDATE $? "Installing nginx"
