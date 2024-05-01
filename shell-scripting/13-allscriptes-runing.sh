@@ -28,5 +28,6 @@ do
         yum install $packages -y #package లేకపోతే install చేస్తుంది.
         VALIDATE $? "installing $packages"
     else
-        echo -e "$packages Is Already Insatalled ... $Y SKIPPING $N" #package వుంటే skipp చేస్తుంది. 
+        echo -e "$packages Is Already Insatalled ... $Y SKIPPING $N" #package వుంటే skipp చేస్తుంది.
+    fi 
 done
