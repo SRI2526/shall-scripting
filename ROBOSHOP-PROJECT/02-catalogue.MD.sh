@@ -53,7 +53,7 @@ VALIDATE $? "Unziping Catalog Appliction"
 npm install &>> $logfiles
 VALIDATE $? "Installing Catalog Appliction"
 
-cp catalogue.service /etc/systemd/system/catalogue.service &>> $logfiles
+cp /home/ec2-user/ROBOSHOP-PROJECT/catalogue.service /etc/systemd/system/catalogue.service &>> $logfiles
 VALIDATE $? "Coping Catalogue Service File"
 
 systemctl daemon-reload &>> $logfiles
@@ -64,7 +64,7 @@ VALIDATE $? "Enable Catalogue"
 systemctl start catalogue &>> $logfiles
 VALIDATE $? "start Catalogue"
 
-cp home/centos/ROBOSHOP-PROJECT/mongo.repo /etc/yum.repos.d/mongo.repo &>> $logfiles
+cp /home/ec2-user/ROBOSHOP-PROJECT/mongo.repo /etc/yum.repos.d/mongo.repo &>> $logfiles
 VALIDATE $? "Coping mongo.repo"
 
 dnf install mongodb-org-shell -y &>> $logfiles
