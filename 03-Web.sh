@@ -10,7 +10,7 @@ echo "stript start executing at $d" &>> $logfiles
 if [ $ID -ne 0 ] #ROOT user అవునా కాదా చూడడానికి.
 then
     echo -e "$R ERROR :: SORRY YOU ARE NOT ROOR USER,PLISE TAKE ROOT USER ACCESS $N."
-    exit 1 #ఇది error వస్తే ఇకడితో stop అవుతుంది.
+    exit 1 #ఇది error వస్తే ఇకడితో stop అవుతుంది..
 
 else
     echo -e "$G YOU ARE IN THA ROOT USER $N."
