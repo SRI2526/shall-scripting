@@ -23,7 +23,7 @@ VALIDATE(){ #package install అయింద లేదా చూడడాని�
         echo -e "$2.....$G SUCCESS $N."
     fi
 }
-cd mongo.repo /etc/yum.repos.d/mongo.repo &>> $logfiles
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $logfiles
 VALIDATE $? "Copy Mongo.DB Repo"
 
 
