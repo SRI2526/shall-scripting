@@ -23,21 +23,15 @@ VALIDATE(){ #package install అయింద లేదా చూడడాని�
         echo -e "$2.....$G SUCCESS $N."
     fi
 }
-dnf install nginx -y &>> $logfiles
-VALIDATE $? "Installing Nginx"
-
-systemctl enable nginx &>> $logfiles
-VALIDATE $? "Enable Nginx"
-systemctl start nginx &>> $logfiles
-VALIDATE $? "Start Nginx"
-rm -rf /usr/share/nginx/html/* &>> $logfiles
-VALIDATE $? "Deleteng Files In Htmal"
-curl -o /tmp/web.zip https://roboshop-builds.s3.amazonaws.com/web.zip &>> $logfiles
-VALIDATE $? "Download Web Applactuon"
-cd /usr/share/nginx/html
-unzip -o /tmp/web.zip &>> $logfiles
-VALIDATE $? "Unziping Web Applaction"
-cp /c/Users/Sri Ram/devops-practice/ROBOSHOP-PROJECT/roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $logfiles
-VALIDATE $? "Coping Web Service File"
-systemctl restart nginx &>> $logfiles
-VALIDATE $? "Restart Web"
+dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y &>> $logfiles
+VALIDATE $? "Installing Remi-Release-8"
+dnf module enable redis:remi-6.2 -y &>> $logfiles
+VALIDATE $? "Enable Remi-6.2"
+dnf install redis -y &>> $logfiles
+VALIDATE $? "Installing Redis-6.2"
+sed -i 's/127.0.0.1/0.0.0.0/g' /etc/redis/redis.conf &>> $logfiles
+VALIDATE $? "Editing Remote Access to Redis"
+systemctl enable redis &>> $logfiles
+VALIDATE $? "Enable Redis"
+systemctl start redis &>> $logfiles
+VALIDATE $? "Start Redis"
