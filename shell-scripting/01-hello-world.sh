@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "File Name"
-read filename
+read 
 echo "destnastion parth"
-read destnastion parth
+read 
 name="/home/ec2-user/krishna/ram.text"
 if [ -e $name ]
 then
