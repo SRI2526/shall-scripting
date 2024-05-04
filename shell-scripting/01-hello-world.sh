@@ -1,5 +1,5 @@
 #!/bin/bash
-read filename
+read "filename"
 read destnastion parth
 name="/home/ec2-user/krishna/ram.text"
 if [ -e $name ]
