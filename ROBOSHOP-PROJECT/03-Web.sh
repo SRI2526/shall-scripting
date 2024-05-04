@@ -37,8 +37,7 @@ VALIDATE $? "Download Web Applactuon"
 cd /usr/share/nginx/html
 unzip -o /tmp/web.zip &>> $logfiles
 VALIDATE $? "Unziping Web Applaction"
-#cp /c/Users/Sri Ram/devops-practice/ROBOSHOP-PROJECT/roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $logfiles
-cat /home/ec2-user/shall-scripting/ROBOSHOP-PROJECT/roboshop.conf
-#VALIDATE $? "Coping Web Service File"
+cp /home/ec2-user/shall-scripting/ROBOSHOP-PROJECT/roboshop.conf /etc/nginx/default.d/roboshop.conf &>> $logfiles
+VALIDATE $? "Coping Web Service File"
 systemctl restart nginx &>> $logfiles
 VALIDATE $? "Restart Web"
