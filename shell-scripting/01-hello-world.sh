@@ -18,5 +18,5 @@ if [ -e $file_name ]
 then
     
 else
-    function $?
+    "function $?"
 fi
