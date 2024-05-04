@@ -1,8 +1,8 @@
 #!/bin/bash
 echo "File Name"
-read 
+read fff
 echo "destnastion parth"
-read 
+read ggg
 name="/home/ec2-user/krishna/ram.text"
 if [ -e $name ]
 then
@@ -12,3 +12,5 @@ else
     echo "this is no match file name"
 fi
 echo "$a"
+echo $fff
+echo $ggg
