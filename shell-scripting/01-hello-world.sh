@@ -11,5 +11,7 @@ then
     a="0"
 else
     echo "this is no match file name"
+    echo "File Name"
+    read file_name
 fi
 echo "$a"
