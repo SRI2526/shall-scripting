@@ -8,7 +8,7 @@ read destnastion_parth
 b=a
 
 FUNCTION(){
-    if [ $a -ne 0 ]
+    if [ $b -ne 0 ]
     then
         echo "file is not have.plice enter File Name"
         read file_name
