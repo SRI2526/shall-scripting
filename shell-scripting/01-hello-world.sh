@@ -16,7 +16,12 @@ while [ $i -ne 0 ];
 do
     echo "Trigan agine file name"
     read file_name
-    -e $file_name
+    if [ -e $file_name ]
+    then
+        i=$?
+    else
+        i=$?
+    fi
     i+=$?
     echo "$i"
 done  
