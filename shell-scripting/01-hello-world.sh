@@ -1,9 +1,11 @@
 #!/bin/bash
+R="\e[31m"
+N="\e[0m"
 echo "File Name"
 read file_name
 
-echo "destnastion parth"
-read destnastion_parth
+echo "Destination Part"
+read Destination_Part
 #name="/home/ec2-user/krishna/ram.text"
 if [ -e $file_name ]
 then
@@ -14,7 +16,8 @@ fi
 i=$a
 while [ $i -ne 0 ];
 do
-    echo "Trigan agine file name"
+    echo -e"$R ERROE $N:::Your File Is Not Exist,Please Try Again."
+    echo "File Name"
     read file_name
     if [ -e $file_name ]
     then
@@ -23,6 +26,5 @@ do
         i=$?
     fi
     i=$?
-    echo "$i"
 done 
 cp $file_name $destnastion_parth
