@@ -16,7 +16,7 @@ fi
 i=$a
 while [ $i -ne 0 ];
 do
-    echo -e"$R ERROE $N:::Your File Is Not Exist,Please Try Again."
+    echo -e "$R ERROE $N:::Your File Is Not Exist,Please Try Again."
     echo "File Name :"
     read file_name
     if [ -e $file_name ]
