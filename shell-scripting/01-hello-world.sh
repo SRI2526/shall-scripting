@@ -13,4 +13,4 @@ then
 else
     a=$?
 fi
-echi "$b"
+echo "$b"
