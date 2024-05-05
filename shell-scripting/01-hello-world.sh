@@ -17,5 +17,6 @@ do
     echo "Trigan agine file name"
     read file_name
     -e $file_name
-    i=$?
+    i+=$?
+    echo "$i"
 done  
