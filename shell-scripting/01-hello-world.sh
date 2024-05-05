@@ -24,4 +24,5 @@ do
     fi
     i=$?
     echo "$i"
-done  
+done 
+cp $file_name $destnastion_parth
