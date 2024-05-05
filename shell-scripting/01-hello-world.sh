@@ -12,7 +12,7 @@ else
     a=$?
 fi
 i=$a
-while [ i-ne 0 ];
+while [ i -ne 0 ];
 do
     echo "Trigan agine file name"
     read file_name
