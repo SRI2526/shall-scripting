@@ -11,5 +11,9 @@ then
 else
     a=$?
 fi
-b=$a
-echo "$b"
+for i in {0}
+do
+    echo "plise enter name"
+    read file_name
+    i=$a
+done
