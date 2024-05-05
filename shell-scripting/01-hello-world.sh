@@ -5,9 +5,9 @@ read file_name
 echo "destnastion parth"
 read destnastion_parth
 #name="/home/ec2-user/krishna/ram.text"
-b="a"
+b=a
 
-if [ -e $filoe_name ]
+if [ -e $file_name ]
 then
     a=$?
 else
