@@ -22,6 +22,6 @@ do
     else
         i=$?
     fi
-    i+=$?
+    i=$?
     echo "$i"
 done  
