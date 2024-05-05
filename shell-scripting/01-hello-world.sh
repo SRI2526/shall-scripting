@@ -1,10 +1,10 @@
 #!/bin/bash
 R="\e[31m"
 N="\e[0m"
-echo "File Name"
+echo "File Name :"
 read file_name
 
-echo "Destination Part"
+echo "Destination Part :"
 read Destination_Part
 #name="/home/ec2-user/krishna/ram.text"
 if [ -e $file_name ]
@@ -17,7 +17,7 @@ i=$a
 while [ $i -ne 0 ];
 do
     echo -e"$R ERROE $N:::Your File Is Not Exist,Please Try Again."
-    echo "File Name"
+    echo "File Name :"
     read file_name
     if [ -e $file_name ]
     then
