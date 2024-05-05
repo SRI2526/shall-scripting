@@ -11,9 +11,11 @@ then
 else
     a=$?
 fi
-for i in {0}
+i=$a
+while [ i-ne 0 ];
 do
-    echo "plise enter name"
+    echo "Trigan agine file name"
     read file_name
-    i=$a
-done
+    -e $file_name
+    i=$?
+done  
