@@ -1,0 +1,16 @@
+#Play book is a list of play,s
+# This is PLAY-1.
+- name: play-1
+  hosts: localhost # It is connect locel server.
+  taska:
+  - name: paly-1 and task-1
+    ansibul.buultin.debug: #"debug" printing, like "echo".
+    msg: "hello paly-1 and task-1" # "msg" printing, like "echo".
+
+# This is PLAY-2.
+- name: play-2
+  hosts: localhost
+  taska:
+  - name: paly-2 and task-2
+    ansibul.buultin.debug:
+    msg: "hello paly-2 and task-2"

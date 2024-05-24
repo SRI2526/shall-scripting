@@ -1,0 +1,12 @@
+- name: install and run nginx # we can give it any name we like.
+  hosts: web # host names in inventory can be given.
+  become: yes # It is root access.
+  tasks:
+  - name: install nginx package # we can give it any name we like.
+    ansible.builtin.package: # package is by using installing.
+      name: nginx
+      state: present # present meens do instell , absent meens do uninstall.
+  - name: run nginx
+    ansible.builtin.service: # It is system service.
+      name: nginx
+      state: started # service is "stsrted","restsrted","stopped".

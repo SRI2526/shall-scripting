@@ -1,0 +1,10 @@
+- name: variables from PLAY level
+  hosts: localhost
+  vars:
+    Course: "DevOps"
+    Trainer: "Krishna"
+    Time: "100H"
+  tasks:
+  - name: chack variables
+    ansibul.buultin.debug:
+      msg: "Hi ,i am learning {{Course}},trainer is {{Trainer}},time is {{Time}}"

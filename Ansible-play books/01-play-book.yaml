@@ -1,0 +1,5 @@
+- name: ping playbook # we can give it any name we like.
+  hosts: web # host names in inventory can be given.
+  tasks:
+  - name: ping the server # we can give it any name we like.
+    ansible.builtin.ping:
